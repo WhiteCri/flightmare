@@ -58,6 +58,38 @@ target_link_libraries(flight_pilot_node
   stdc++fs
 )
 
+##tw
+cs_add_executable(tw
+   src/pilot/tw.cpp
+)
+
+target_link_libraries(tw
+  flight_pilot
+  zmqpp
+  stdc++fs
+)
+
+cs_add_executable(racing_tw
+   src/racing/racing_tw.cpp
+)
+
+target_link_libraries(racing_tw
+  flight_pilot
+  zmqpp
+  stdc++fs
+)
+
+cs_add_executable(camera_tw
+   src/camera/camera_tw.cpp
+)
+
+target_link_libraries(camera_tw
+  flight_pilot
+  zmqpp
+  stdc++fs
+)
+##tw done
+
 # motion_planning
 
 if(BUILD_MP)
